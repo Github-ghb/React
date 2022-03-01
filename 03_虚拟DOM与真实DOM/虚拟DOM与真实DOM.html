@@ -18,6 +18,18 @@
         let VDOM = <h1>Hello, world</h1>
         //2.将虚拟DOM——VDOM转为真实DOM，渲染到页面
         ReactDOM.render(VDOM, document.getElementById('test'))
+
+        console.log(typeof VDOM)//VDOM的属性：object，即一般对象
+        console.log(VDOM instanceof Object)//判断VDOM类型是否为object：true
+        //对比虚拟DOM和真实DOM
+        const TDOM = document.getElementById('test')
+        console.log('虚拟DOM',VDOM)
+        console.log('真实DOM',TDOM)
+        /*
+        关于虚拟DOM和真实DOM
+        1.虚拟DOM是react在用的，无需真实DOM上那么多的属性。
+        2.虚拟DOM最终一定会转为真实DOM放入页面。
+        */
     </script>
 </body>
 </html>
